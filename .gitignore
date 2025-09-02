@@ -1,0 +1,9 @@
+src/config.sh
+config.sh
+*.crt
+*.key
+*.csv
+*.log
+gl_delfector_indices
+gl_indices
+.DS_Store
