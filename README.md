@@ -17,4 +17,4 @@ Instructions to run:
 3. Uncomment lines in the main function depending on what you want to do:
     * `DELETE_ALL_RANDOM_INPUTS` - Deletes ALL inputs of type `org.graylog2.inputs.random.FakeHttpMessageInput`
     * `CREATE_MANY_MANY_RANDOM_INPUTS <number>` - creates a specified number of inputs of type `org.graylog2.inputs.random.FakeHttpMessageInput`
-4. execute create-inputs-test.sh
+4. execute `create-inputs-test.sh`
