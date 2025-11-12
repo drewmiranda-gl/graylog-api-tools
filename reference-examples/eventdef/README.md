@@ -1,6 +1,11 @@
 # Introduction
 
-Reference Examples for interacting with API endpoints for Graylog Event Definitions
+Reference Examples for interacting with API endpoints for Graylog Event Definitions.
+
+This information has been tested and verified for:
+- Graylog 6.3
+- Graylog 7.0
+- Graylog Cloud
 
 # Create Event Definition
 
