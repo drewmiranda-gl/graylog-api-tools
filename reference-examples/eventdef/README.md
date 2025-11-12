@@ -17,12 +17,20 @@ GRAYLOG_URI_BASE=$(echo $GRAYLOG_URI_BASE | sed 's/\/$//')
 # leave the sapce so that bash history does not save this
  GRAYLOG_API_TOKEN=
 
+# Choose if newly created event definition should be enabled upon creation.
+#   false = disabled
+#   true  = enabled
+ENABLE_CREATED_EVENT="false"
+# ENABLE_CREATED_EVENT="true"
+
 curl "${GRAYLOG_URI_BASE}/api/events/definitions?schedule=${ENABLE_CREATED_EVENT}" \
   --user "${GRAYLOG_API_TOKEN}:token" \
   -H 'Content-Type: application/json' \
   -H 'X-Requested-By: XMLHttpRequest' \
-  -d "@eventdef.json"
+  -d "@eventdef_before_gl7.json"
 ```
+
+Note that Graylog 7 introduces breaking changes for this API endpoint. See [General REST API Changes](https://github.com/Graylog2/graylog2-server/blob/7.0/UPGRADING.md#general-rest-api-changes)
 
 # Viewing Existing Event Definitions
 

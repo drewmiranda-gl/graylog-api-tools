@@ -37,8 +37,10 @@ curl "${GRAYLOG_URI_BASE}/api/plugins/org.graylog.plugins.securityapp.sigma/sigm
   --user "${GRAYLOG_API_TOKEN}:token" \
   -H 'Content-Type: application/json' \
   -H 'X-Requested-By: XMLHttpRequest' \
-  -d "@sigmarule.json"
+  -d "@sigmarule_before_gl7.json"
 ```
+
+Note that Graylog 7 introduces breaking changes for this API endpoint. See [General REST API Changes](https://github.com/Graylog2/graylog2-server/blob/7.0/UPGRADING.md#general-rest-api-changes)
 
 # Viewing Existing Sigma Rules
 

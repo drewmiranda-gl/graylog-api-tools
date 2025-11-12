@@ -1,0 +1,48 @@
+{
+    "_scope": "DEFAULT",
+    "title": "z - test - api - create eventdef",
+    "description": "Events Event Limit is counterintuitive, throws a system error.",
+    "priority": 2,
+    "alert": true,
+    "config": {
+      "type": "aggregation-v1",
+      "query": "_exists_:timestamp",
+      "query_parameters": [],
+      "filters": [],
+      "streams": [],
+      "stream_categories": [],
+      "group_by": [],
+      "series": [],
+      "conditions": {
+        "expression": null
+      },
+      "search_within_ms": 60000,
+      "execute_every_ms": 60000,
+      "use_cron_scheduling": true,
+      "cron_expression": "0 * * ? * *",
+      "cron_timezone": "America/New_York",
+      "event_limit": 100
+    },
+    "field_spec": {},
+    "key_spec": [],
+    "notification_settings": {
+      "grace_period_ms": 300000,
+      "backlog_size": 1
+    },
+    "notifications": [
+      {
+        "notification_id": "66f5b9acfb912e149e67a202",
+        "notification_parameters": null
+      }
+    ],
+    "storage": [
+      {
+        "type": "persist-to-streams-v1",
+        "streams": [
+          "000000000000000000000002"
+        ]
+      }
+    ],
+    "scheduler": null,
+    "state": "DISABLED"
+}
