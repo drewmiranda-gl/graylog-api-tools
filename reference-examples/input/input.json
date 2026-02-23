@@ -1,0 +1,13 @@
+{
+    "type": "org.graylog2.inputs.random.FakeHttpMessageInput",
+    "configuration": {
+        "throttling_allowed": false,
+        "sleep": 25000,
+        "sleep_deviation": 30000,
+        "source": "example.org",
+        "override_source": null,
+        "charset_name": "UTF-8"
+    },
+    "title": "An Example Test Input",
+    "global": true
+}

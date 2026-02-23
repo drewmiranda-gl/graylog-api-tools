@@ -1,0 +1,33 @@
+{
+    "id": "699c99e962899cd78324a079",
+    "title": "Example Index Set",
+    "description": "Example description",
+    "index_prefix": "prefix",
+    "index_analyzer": "standard",
+    "shards": 1,
+    "replicas": 0,
+    "index_optimization_max_num_segments": 1,
+    "index_optimization_disabled": false,
+    "field_type_refresh_interval": 5000,
+    "data_tiering": {
+        "index_lifetime_max": "P40D",
+        "index_lifetime_min": "P30D",
+        "archive_before_deletion": false,
+        "warm_tier_enabled": false,
+        "index_hot_lifetime_min": "P10D",
+        "warm_tier_repository_name": null,
+        "type": "hot_warm"
+    },
+    "rotation_strategy_class": "org.graylog2.indexer.rotation.strategies.TimeBasedSizeOptimizingStrategy",
+    "rotation_strategy": {
+        "type": "org.graylog2.indexer.rotation.strategies.TimeBasedSizeOptimizingStrategyConfig",
+        "index_lifetime_min": "P30D",
+        "index_lifetime_max": "P40D"
+    },
+    "retention_strategy_class": "org.graylog2.indexer.retention.strategies.DeletionRetentionStrategy",
+    "retention_strategy": {
+        "type": "org.graylog2.indexer.retention.strategies.DeletionRetentionStrategyConfig",
+        "max_number_of_indices": 20
+    },
+    "writable": true
+}
