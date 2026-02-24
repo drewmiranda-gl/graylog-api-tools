@@ -49,7 +49,7 @@ GRAYLOG_URI_BASE=$(echo $GRAYLOG_URI_BASE | sed 's/\/$//')
 curl "${GRAYLOG_URI_BASE}/api/system/indices/index_sets" \
   --user "${GRAYLOG_API_TOKEN}:token"
 
-# use a query to return a single Input, using its unique `id`
+# use a query to return a single Index Set, using its unique `id`
 INDEXSET_ID=699c99e962899cd78324a079
 curl "${GRAYLOG_URI_BASE}/api/system/indices/index_sets/${INDEXSET_ID}" \
   --user "${GRAYLOG_API_TOKEN}:token"
@@ -69,7 +69,7 @@ GRAYLOG_URI_BASE=$(echo $GRAYLOG_URI_BASE | sed 's/\/$//')
 # leave the sapce so that bash history does not save this
  GRAYLOG_API_TOKEN=
 
-# use a query to return a single Input, using its unique `id`
+# Update Index Set using its unique `id`
 INDEXSET_ID=699c99e962899cd78324a079
 curl "${GRAYLOG_URI_BASE}/api/system/indices/index_sets/${INDEXSET_ID}" \
   --user "${GRAYLOG_API_TOKEN}:token" \
