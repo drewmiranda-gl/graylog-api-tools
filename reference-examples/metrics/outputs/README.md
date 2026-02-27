@@ -13,22 +13,10 @@ GRAYLOG_URI_BASE=$(echo $GRAYLOG_URI_BASE | sed 's/\/$//')
 # leave the sapce so that bash history does not save this
  GRAYLOG_API_TOKEN=
 
-append_line() {
-    local new_line="$1"
-
-    if [[ -z "$METRICS_LIST" ]]; then
-        METRICS_LIST="$new_line"
-    else
-        METRICS_LIST+=$'\n'"$new_line"
-    fi
-}
-
 jq_append() {
     local new_item="$1"
     JSON_LIST=$(jq --arg item "${new_item}" '. += [$item]' <<< "$JSON_LIST")
 }
-
-METRICS_LIST=""
 
 # get outputs list
 OUTPUTS_LIST=$(curl "${GRAYLOG_URI_BASE}/api/system/outputs" \
